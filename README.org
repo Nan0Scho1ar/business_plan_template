@@ -1,0 +1,389 @@
+#+TITLE: Business Plan Template
+#+STARTUP: inlineimages
+#+LANGUAGE: en
+#+EXPORT_FILE_NAME: index.html
+#+date: @@html:<!--@@{{{git-rev}}}@@html:-->@@@@latex:\\\Large\bfseries@@ {{{modification-time(%Y-%m-%d, t)}}} @@latex:\\\normalsize\mdseries@@{{{modification-time(%H:%M, t)}}} @@latex:\acr{\lowercase{@@{{{timezone}}}@@latex:}}\iffalse@@, {{{git-rev}}}@@latex:\fi@@
+#+macro: timezone (eval (substring (shell-command-to-string "date +%Z") 0 -1))
+#+macro: git-rev (eval (format "@@html:<a href=\"https://github.com/Nan0Scho1ar/business_plan_template/commit/%1$s\" style=\"text-decoration: none\"><code style=\"padding: 0; color: var(--text-light); font-size: inherit; opacity: 0.7\">%1$s</code></a>@@@@latex:\\href{https://github.com/Nan0Scho1ar/business_plan_template/commit/%1$s}{\\normalsize\\texttt{%1$s}}@@" (substring (shell-command-to-string "git rev-parse --short HEAD") 0 -1)))
+#+HTML_HEAD:
+
+#+begin_export xml
+<a href="https://github.com/Nan0Scho1ar/business_plan_template"
+   style="font-family: 'Open Sans'; background-image: none; color: inherit;
+          text-decoration: none; position: relative; top: clamp(-26px, calc(1280px - 100vw), 0px); opacity: 0.7;">
+   <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiB2aWV3Qm94PSIwIDAgMTAyNCAxMDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTggMEMzLjU4IDAgMCAzLjU4IDAgOEMwIDExLjU0IDIuMjkgMTQuNTMgNS40NyAxNS41OUM1Ljg3IDE1LjY2IDYuMDIgMTUuNDIgNi4wMiAxNS4yMUM2LjAyIDE1LjAyIDYuMDEgMTQuMzkgNi4wMSAxMy43MkM0IDE0LjA5IDMuNDggMTMuMjMgMy4zMiAxMi43OEMzLjIzIDEyLjU1IDIuODQgMTEuODQgMi41IDExLjY1QzIuMjIgMTEuNSAxLjgyIDExLjEzIDIuNDkgMTEuMTJDMy4xMiAxMS4xMSAzLjU3IDExLjcgMy43MiAxMS45NEM0LjQ0IDEzLjE1IDUuNTkgMTIuODEgNi4wNSAxMi42QzYuMTIgMTIuMDggNi4zMyAxMS43MyA2LjU2IDExLjUzQzQuNzggMTEuMzMgMi45MiAxMC42NCAyLjkyIDcuNThDMi45MiA2LjcxIDMuMjMgNS45OSAzLjc0IDUuNDNDMy42NiA1LjIzIDMuMzggNC40MSAzLjgyIDMuMzFDMy44MiAzLjMxIDQuNDkgMy4xIDYuMDIgNC4xM0M2LjY2IDMuOTUgNy4zNCAzLjg2IDguMDIgMy44NkM4LjcgMy44NiA5LjM4IDMuOTUgMTAuMDIgNC4xM0MxMS41NSAzLjA5IDEyLjIyIDMuMzEgMTIuMjIgMy4zMUMxMi42NiA0LjQxIDEyLjM4IDUuMjMgMTIuMyA1LjQzQzEyLjgxIDUuOTkgMTMuMTIgNi43IDEzLjEyIDcuNThDMTMuMTIgMTAuNjUgMTEuMjUgMTEuMzMgOS40NyAxMS41M0M5Ljc2IDExLjc4IDEwLjAxIDEyLjI2IDEwLjAxIDEzLjAxQzEwLjAxIDE0LjA4IDEwIDE0Ljk0IDEwIDE1LjIxQzEwIDE1LjQyIDEwLjE1IDE1LjY3IDEwLjU1IDE1LjU5QzEzLjcxIDE0LjUzIDE2IDExLjUzIDE2IDhDMTYgMy41OCAxMi40MiAwIDggMFoiIHRyYW5zZm9ybT0ic2NhbGUoNjQpIiBmaWxsPSIjMUIxRjIzIi8+Cjwvc3ZnPgo="
+       class="invertible" alt="GitHub Octicon"
+       style="height: 1em; position: relative; top: 0.1em;">
+  View on GitHub</a>&ensp;
+#+end_export
+
+~Org file template based on the business plan template found at:~ [[https://business.gov.au/businessplan][https://business.gov.au/businessplan]]
+
+~Insert your business logo~
+
+~Enter your business name~
+
+
+* Business plan
+~Use the italicised guidance throughout this template~
+~for help completing your business plan.~
+~You may wish to remove this text before you finalise your plan.~
+
+Date:
+
+* Key details
+** Registration details
+~Find out about business registrations and choosing a business structure.~
+Business name:
+
+Date registered:
+
+State registered in:
+
+Business structure:
+
+Australian business number (ABN):
+
+Licences and permits: ~Australian, state and local.
+Examples: disposal of waste, safe food preparation~
+** Contact details
+Name:
+
+Phone:
+
+Mobile:
+
+Email:
+
+Address:
+** Online and social media details
+|---------+-----------------|
+| Website | Address/details |
+|---------+-----------------|
+|         |                 |
+|---------+-----------------|
+* The business
+** Plan summary
+~Complete this section last so you can summarise~
+~information from the rest of your plan.~
+*** What our business does
+The products or services we sell.
+*** Our target market
+*** Our unique selling point
+*** Our business goals
+*** Our history
+Industry experience, major achievements.
+
+** Our why
+~Consider why you started this business.~
+~Why are you personally invested in this business idea?~
+~Example: To be the go-to supplier of high quality,~
+~sustainable coffee in Australia.~
+
+The inspiration behind the business.
+** Our vision
+~Consider what you want your business to accomplish in the long term.~
+~What are your ultimate goals? Be passionate, powerful and inspiring.~
+~Example: To be the go-to supplier of high quality,~
+~sustainable coffee in Australia and~
+~reduce environmental impacts through promoting sustainable shopping practices.~
+
+Our hopes, dreams and where we aim to go.
+** Our mission
+~Consider the purpose of your business and define~
+~what it does for your customers.~
+~What do you do, how do you do it and why do you do it?~
+~Example: We supply high quality, sustainably produced coffee for all coffee~
+~lovers to enjoy while minimising their environmental impact.~
+
+Who we are and why we exist.
+** Operations
+*** Products and services
+What we’re selling.
+|-----------------+-------------+------------------------|
+| Product/service | Description | Unit price (incl. GST) |
+|-----------------+-------------+------------------------|
+|                 |             |                        |
+|-----------------+-------------+------------------------|
+*** Production
+~Example: Intrinsic Coffee sources premium beans from Bean There Growers.~
+~Our packaging is printed by an external provider.~
+~We process and package beans on site with strict quality controls in place.~
+
+How we produce our products or services and where we get our main supplies from.
+*** Sales and distribution channels
+The channels we’ll use to distribute our product or service to customers.
+|------------------+-----------------------------------------------------------+-------------------------------------------------|
+| Channel          | Used for                                                  | Details                                         |
+|------------------+-----------------------------------------------------------+-------------------------------------------------|
+| ~Select a channel~ | ~Example: Selling our coffee beans internationally online.~ | ~Example: Beans Online account for 20% of sales.~ |
+|                  |                                                           |                                                 |
+|------------------+-----------------------------------------------------------+-------------------------------------------------|
+*** Digital technology
+~Learn about selling online and digital options to~
+~improve your business efficiency and profitability.~
+~Examples: online sales, accounting software, customer database~
+
+Technology we plan to use for our business.
+*** Information management
+~How do you collect, store and use customer and stock information?~
+~Do you back up this information?~
+~How do you do this and how often? Make sure you comply with~
+~industry standards and  legislation.~
+~Examples: online sales, accounting software, customer database~
+
+How we collect, store and use customer and stock information.
+** Assets
+*** Premises
+~Describe your business premises, the location,~
+~facilities and whether you own or lease them.~
+~Visit our Business premises page for more information.~
+~Example: We own a café shopfront in the Sydney CBD.~
+~The location has significant foot traffic and visibility.~
+*** Stock and inventory
+~What stock do you have? Describe how you store and manage stock.~
+~See our managing inventory page for more information.~
+~Example: We have 300 kg of coffee beans.~
+~We store stock onsite and it is replaced every 2 months.~
+*** Equipment
+|------------------------------------------+-----------------------+----------|
+| Equipment                                | Date bought or leased | Cost ($) |
+|------------------------------------------+-----------------------+----------|
+| ~Examples: computers, machinery, vehicles~ |                       |          |
+|                                          |                       |          |
+|------------------------------------------+-----------------------+----------|
+*** Intellectual property
+~List any intellectual property that you have registered or need to protect.~
+~For more information, check our intellectual property guide.~
+~Example: Intrinsic Coffee logo is registered as a trade mark.~
+** Key people
+*** Our staff
+~List your existing staff and any staff required for your business.~
+~Include yourself and list any major achievements~
+~and relevant business experience.~
+|-------------------------------------------+---------------------------+-----------------------|
+| Role                                      | Name (If role is filled.) | Skills and experience |
+|-------------------------------------------+---------------------------+-----------------------|
+| ~Examples: owner, manager, casual employee~ |                           |                       |
+|                                           |                           |                       |
+|-------------------------------------------+---------------------------+-----------------------|
+*** Sources of advice and support
+~Sources of advice and support for your business~
+~could include a business mentor,~
+~your accountant, a valued supplier or even an industry association.~
+
+External people or organisations that provide support to our business.
+|----------------------+------+-----------------------|
+| Support type         | Name | Skills and experience |
+|----------------------+------+-----------------------|
+| ~Example: Accountant.~ |      |                       |
+|----------------------+------+-----------------------|
+*** Skill and staff retention strategies
+~Read about developing and maintaining staff skills.~
+~Example: The manager regularly checks in with staff, all staff attend monthly~
+~team meetings, we offer free courses to maintain staff skills and involve~
+~staff in our professional development planning process.~
+
+How we keep our staff working for us and maintain their skills.
+** The market
+*** The problem
+~What issues do your potential customers face in the market? Is there a~
+~lack of your service type in a particular suburb?~
+~Is the product supplied by other businesses expensive?~
+~Example: There’s an overwhelming choice of coffee blends in the market.~
+~It’s hard for customers to know what they’re buying.~
+
+The market problem/s that we aim to solve for customers.
+*** Our solution
+~Example: Intrinsic Coffee sells a small range of high-quality coffee.~
+~We don’t use fancy names for our blends, so people know what they’re buying.~
+
+How our business solves the problem – our unique selling point.
+This is how we’ll succeed in the market.
+*** Our target market
+~Not everyone will want your product or service, so make sure you research~
+~the market and have a clear picture of who you’re targeting.~
+~This helps focus your marketing efforts and improve your chances of success.~
+~Describe your targeted customers for example by gender,~
+~age, income, location or education.~
+~Example: Our products are targeted at adults over 30~
+~with a medium to high disposable income.~
+
+The group of customers that we aim to sell our products or services to.
+*** Advertising and promotion
+~Choose channels that suit your target market. For example, social media~
+~use varies across different age groups. Learn about choosing the best~
+~channels to communicate with your customers.~
+
+The channels we’ll use to communicate with our target customers.
+
+#+TBLNAME: report
+|---------+-------------------------------------+-----------------------------------------------------------------------------------------------------------------|
+| Channel | Used for                            | Details                                                                                                         |
+|---------+-------------------------------------+-----------------------------------------------------------------------------------------------------------------|
+|         | ~Example: Promotion prior to launch.~ | ~Example: We’ll use regular Facebook posts to promote the product and offer discounts to our first 20 customers.~ |
+|         |                                     |                                                                                                                 |
+|---------+-------------------------------------+-----------------------------------------------------------------------------------------------------------------|
+#+END:
+
+*** The competition
+The top 3 businesses we’re competing against, what they do well and not so well.
+What we’ll do differently to succeed in the market.
+|---------------------------------------+------------------------------+---------------------------------------------------------+-----------------------------------------------------------------|
+| Competitor name                       | Strengths                    | Weaknesses                                              | What we’ll do differently                                       |
+|---------------------------------------+------------------------------+---------------------------------------------------------+-----------------------------------------------------------------|
+| ~Example: Sludge International Coffee.~ | ~Example: Low product prices.~ | ~Example: Low quality product, unsustainable production.~ | ~Example: We only sell high quality, sustainably produced beans.~ |
+|                                       |                              |                                                         |                                                                 |
+|---------------------------------------+------------------------------+---------------------------------------------------------+-----------------------------------------------------------------|
+*** Pricing strategy
+~Explain your pricing strategy and why you chose it.~
+~Example: Our coffee beans are sold at cost of production and distribution
+plus~ ~a mark-up of 50%. This ensures we remain competitive and make a profit.~
+
+How we set prices for our products/services.
+*** SWOT analysis
+~Learn how to complete a SWOT analysis for your business.~
+Our business strengths, weaknesses, opportunities and threats.
+**** Strengths
+~Example: Premises are in a high traffic area with good visibility.~
+
+What’s good about our business.
+**** Weaknesses
+~Example: The business has no business website
+and there are high rental costs.~
+
+What’s not so good about our business.
+**** Opportunities
+~Example: The market is growing rapidly.~
+
+External factors we could take advantage of.
+**** Threats
+External factors that could cause problems for us.
+~Example: A new competitor could target the same market.~
+*** How we’ll address each weakness and threat
+~Example: We’ll investigate alternative lower cost premises~
+~with good visibility.~
+** Risk management
+*** Risk assessment
+~Learn about types of risk that could affect your business and how to assess~
+~and manage risks to your business.~
+
+Risks that could impact our business and what we’ll do to protect it.
+|---------------------------------------------------------------+------------+--------------------------------------------------|
+| Risk/impact description                                       | Likelihood | What we’ll do to reduce this risk                |
+|---------------------------------------------------------------+------------+--------------------------------------------------|
+| ~Example: Pandemic causes closure of our retail outlet.~        |            | ~Example: Strengthen online sales/e-commerce.~     |
+| ~Example: Computer theft results in loss of financial records.~ |            | ~Example: Use cloud storage for business records.~ |
+|---------------------------------------------------------------+------------+--------------------------------------------------|
+*** Insurance
+~If you’re not sure what you need, visit our Business~
+~insurance page for more information.~
+
+The insurance we have or need.
+|----------------+---------|
+| Insurance type | Details |
+|----------------+---------|
+|                |         |
+|----------------+---------|
+*** Succession plan
+~What will you do if you decide to step down from your business?
+Do you have a~ ~plan in place in case something happens to you?~
+~Who would you want to take over your business?~
+~Consider formally documenting a succession plan for your business.~
+~Example: If the current owner decides to step down,~ ~the position
+will be offered~ ~to other business partners.
+The current owner will be paid out for their share~
+~and step down to an advisory role.~
+*** Laws we’ll need to comply with
+~List the laws that impact on your business~
+~including laws specific to your industry.~
+~Examples: fair trading/consumer laws, employment laws, state licences~
+** Goals and actions
+~Learn how to set goals that will help your business grow.~
+*** Goals for next year
+|-------------------------+----------+-------------------|
+| Actions to achieve goal | Due date | Who’s responsible |
+|-------------------------+----------+-------------------|
+|                         |          |                   |
+|                         |          |                   |
+|                         |          |                   |
+|                         |          |                   |
+|                         |          |                   |
+|-------------------------+----------+-------------------|
+*** Goals for the next 3 years
+|-------------------------+----------+-------------------|
+| Actions to achieve goal | Due date | Who’s responsible |
+|-------------------------+----------+-------------------|
+|                         |          |                   |
+|                         |          |                   |
+|                         |          |                   |
+|                         |          |                   |
+|                         |          |                   |
+|-------------------------+----------+-------------------|
+** The finances
+~You may find the Australian Taxation Office’s small business~
+~benchmarks useful to compare your performance when completing this section.~
+*** Finance needed
+~Delete this section if you aren’t seeking finance.~
+~Example: We are seeking a loan of $30,000 to purchase and install an~
+~automated coffee packaging machine.~
+
+How much money we need and what it’s for.
+*** Sources of funding
+~Describe sources and amounts of funding that your business has received.~
+~Include your own investment in your business.~
+~Example: We have received a $X loan from Business Bank.~
+~There is also $X of self-investment.~
+*** Current finances
+~Summarise your business performance over the last financial year~
+~in terms of cash flow, profit/loss and balance.~
+~Example: Over the last financial year we have had a positive cash~
+~flow of $X, out net profit was $X and our assets are worth $X.~
+
+How our business performed financially over the last financial year.
+*** Balance forecast
+~You can use our balance sheet template, your own accounting tools~
+~or ask your accountant for help~
+
+A summary of our forecast balance for the next 3 years.
+
+|-------------------+--------+--------+--------|
+| Year              | Year 1 | Year 2 | Year 3 |
+|-------------------+--------+--------+--------|
+| Total assets      |        |        |        |
+| Total liabilities |        |        |        |
+| Net assets        |        |        |        |
+|-------------------+--------+--------+--------|
+*** Profit and loss forecast
+~You can use our profit and loss template, your own accounting tools~
+~or ask your accountant for help.~
+
+Our forecast profit/loss for the next 3 years.
+|------------------------+--------+--------+--------|
+| Year                   | Year 1 | Year 2 | Year 3 |
+|------------------------+--------+--------+--------|
+| Gross profit/net sales |        |        |        |
+| Total expenses         |        |        |        |
+| Net profit/loss        |        |        |        |
+|------------------------+--------+--------+--------|
+*** Cash flow forecast
+~You can use our cash flow statement template, your own accounting tools~
+~or ask your accountant for help.~
+
+Our forecast cash flow for the next year.
+|----------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----|
+| Month                | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec |
+|----------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----|
+| Monthly cash balance | $   | $   | $   | $   | $   | $   | $   | $   | $   | $   | $   | $   |
+| Closing balance      | $   | $   | $   | $   | $   | $   | $   | $   | $   | $   | $   | $   |
+|----------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----|
+* Supporting document checklist
+Attached documents (where relevant):
+- [ ] Balance sheet forecast (including assumptions)
+- [ ] Balance sheet for last financial year
+- [ ] Cash flow statement forecast (including any assumptions)
+- [ ] Cash flow statement for last financial year
+- [ ] Market research
+- [ ] Profit and loss forecast sheets (including any assumptions)
+- [ ] Profit and loss for last financial year
+- [ ] Staff resume/s

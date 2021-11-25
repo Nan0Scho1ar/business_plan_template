@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-11-25 Thu 15:32 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Business Plan Template</title>
+<meta name="author" content="Nan0Scho1ar" />
+<meta name="generator" content="org mode" />
+<meta name="theme-color" content="#77aa99" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Business Plan Template" />
+<meta property="og:image" content="https://n0s1.net/resources/org/nib.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:image:alt" content="Green fountain pen nib" />
+<meta property="og:article:author:first_name" content="Nan0Scho1ar" />
+<meta property="og:article:published_time" content="2021-11-25T00:00:00+1000" />
+<meta property="og:article:modified_time" content="2021-11-25T15:32:37+1000" />
+<script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+function copyPreToClipbord(btn) {
+    const pre = btn.parentElement.parentElement.getElementsByTagName("PRE")[0];
+    const range = document.createRange();
+    range.selectNodeContents(pre);
+    range.setEnd(pre.childNodes[pre.childNodes.length-1], 0);
+    window.getSelection().addRange(range);
+    var successful = document.execCommand('copy');
+    window.getSelection().removeRange(range);
+}
+window.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById("text-table-of-contents")) {
+        const sections = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        const activate = (entry) => {
+            entry.classList.add('active');
+            if (["LI", "UL"].includes(entry.parentElement.tagName)) {
+                activate(entry.parentElement);
+            }
+        };
+        const activateLast = () => {
+            document.querySelectorAll('#text-table-of-contents li.active, #text-table-of-contents ul.active').forEach(a => {
+                a.classList.remove('active')
+            });
+            let mostRecent = { section: sections[0], bottom: -Infinity };
+            const windowHeight = window.innerHeight;
+            sections.forEach((section) => {
+                const bounds = section.getBoundingClientRect()
+                if ( bounds.bottom > mostRecent.bottom && bounds.top < windowHeight ) {
+                    mostRecent = { section, bottom: bounds.bottom };
+                }
+            })
+            activate(document.querySelector(`#text-table-of-contents li a[href="#${mostRecent.section.getAttribute('id')}"]`).parentElement);
+        }
+        const observer = new IntersectionObserver(entries => {
+            activateLast();
+        });
+        sections.forEach((section) => {
+            observer.observe(section);
+        });}
+});
+// @license-end
+</script>
+<style>
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}b{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:1px dotted ButtonText}details{display:block}summary{display:list-item}
+/*! end normalise.css */
+#page{--accent: #002642;--accent-dark: #00151c;--code-foreground: #2c3e50;--code-background: #efefef;--code-func: #6c3163;--code-const: #4e3163;--code-regex: #655370;--back-white: #fff;--back-light: #f0eeed;--back-medium: #c8c8c8;--text-light: #7b7b7b;--text-gray: #444;--text-medium: #222;--text-dark: #000;--switch-icon: "🌚";--switch-shadow-color: #373d4e;--switch-text: "dark mode?"}#theme-switch:checked~#page{--accent: #002642;--accent-dark: #daf1ff;--code-foreground: #a1a8ae;--code-background: #222;--code-func: #bd56ad;--code-const: #8755ab;--code-regex: #a184b3;--back-white: #000;--back-light: #181818;--back-medium: #444;--text-light: #7b7b7b;--text-gray: #c8c8c8;--text-medium: #ddd;--text-dark: #efefef;--switch-icon: "🌝";--switch-shadow-color: #fce477;--switch-text: "light mode?"}#theme-switch:checked~#page img.invertible,#theme-switch:checked~#page object.invertible[type="image/svg+xml"]{filter:invert(90%) hue-rotate(180deg) sepia(1%)}#theme-switch{display:none}#switch-label{position:fixed;bottom:4rem;left:3rem}#switch-label::before{content:var(--switch-icon);font-size:20px;transition:text-shadow .2s}#switch-label::after{content:var(--switch-text);color:var(--switch-shadow-color);font-size:12px;visibility:hidden;margin-left:.5em;z-index:1;position:fixed;bottom:calc(4rem - 25px);left:calc(3rem - 10px)}@media (max-width:1000px){#switch-label{left:auto;bottom:auto;right:1vw;top:1vh}#switch-label::after{position:fixed;top:calc(1vh + 3px);right:calc(1vw + 30px);left:auto;bottom:auto}}#switch-label:hover::before,#theme-switch:focus~#page #switch-label::before{text-shadow:0 0 15px var(--switch-shadow-color)}#switch-label:hover::after,#theme-switch:focus~#page #switch-label::after{visibility:visible}::selection{background:var(--back-medium)}.pace .pace-progress{background-color:var(--accent)!important}body,html{height:100%}body{display:flex;flex-direction:column;font-size:16px;font-family:"Merriweather",serif}#page{color:var(--text-dark);background-color:var(--back-light);transition-property:color,background-color;transition-duration:100ms}#content,.page-header,header{margin:32px;flex:1 0 auto}#content{margin-top:4rem;min-height:calc(100vh - 4rem - 48px)}.clearfix::after{clear:both}.clearfix::after,.clearfix::before{content:" ";display:table}.page-header{margin-top:80px;margin-left:0!important}.page-header h1{font-size:40px;margin-bottom:10px;margin-top:10px;text-transform:none}.page-header h1 .subtitle{font-size:24px;color:var(--text-light);margin:0}.page-meta,figure figcaption .figure-number,header .site-nav{font-family:"Open Sans",sans;font-weight:400;font-style:normal;font-size:12px;line-height:1.9;color:var(--text-light)}header .site-nav{font-weight:700;line-height:2;margin-top:22px}header .site-nav a{color:var(--text-light);text-decoration:none;margin-left:10px}header .site-nav a:hover{color:var(--text-gray)}header .site-nav a.active{border-bottom:solid;border-bottom-width:2px}header .site-nav a:first-child{margin-left:0}header>div{display:inherit}.site-title{font-size:16px}.site-title span{display:none!important}.site-title ul{display:block!important;list-style:none;padding:0;margin:0}.site-title ul img{border-radius:2px;max-width:32px}.site-header nav a{color:var(--text-light);font-family:"Open Sans",sans;font-size:12px;font-weight:700;text-transform:uppercase}.site-header nav a:hover{border:0;color:var(--accent)}@media (max-width:1000px){header *{display:inline}}@media (min-width:1000px){#content,.page-header,header{max-width:720px;margin-left:164px}header .site-title{float:left}header .site-nav{float:right;margin-top:0}}@media (min-width:2800px){#content,.page-header,header{margin-left:auto;margin-right:auto}}#content .page-intro{font-family:"Open Sans",sans;font-weight:400;font-size:15px;line-height:1.6;color:var(--text-gray);margin-bottom:40px}#content dd,#content li,#content p{line-height:1.9}#footer{margin-top:70px;height:10px;background:var(--accent-dark)}.archive-item{margin:50px 0}.archive-item .archive-title{font-size:25px;margin:5px 0}.archive-item .archive-title,.archive-item .archive-title:hover{background:0 0;text-shadow:none;text-decoration:none}#postamble,details.code[open] summary .lang{display:none}aside{background-color:var(--code-background);border-radius:5px;margin:20px 0;padding:5px 20px 10px}#footnotes li,#footnotes p,.org-ref-bib,.org-ref-bib-h1,aside,aside p,blockquote footer{font-family:"Open Sans",sans;font-weight:400;color:var(--text-gray)}aside,aside p{font-size:15px;line-height:1.6!important}aside pre{font-size:12px;border:0;padding-left:0}@media (min-width:1280px){aside{float:right;clear:right;background-color:var(--back-white);max-width:45%!important;margin-right:-52%}aside::before{content:''}}blockquote{border-left-style:solid;border-width:0 0 0 1px;border-left-color:var(--back-medium);margin:20px 0;padding:0 0 0 15px}blockquote p{display:inline;font-size:13px}blockquote footer{font-style:normal;font-size:12px;line-height:1.9;color:var(--text-light);text-transform:none}div.info{background:rgba(58,129,195,.15);border-left:4px solid rgba(58,129,195,.45);margin:1.8rem 0 1.25rem 15px;padding:.8em;line-height:1.4;text-align:center;position:relative;clear:both}div.error p,div.info p,div.success p,div.warning p{margin:0}div.error::before,div.info::before,div.success::before,div.warning::before{color:var(--back-white);align-items:flex-end;top:-1rem;font-weight:700;font-size:1.4rem;display:inline-flex;justify-content:center;position:absolute;left:-1.2rem;text-align:center}div.info::before{content:"i";background:rgba(58,129,195,.8);-webkit-clip-path:circle(50% at 50% 50%);clip-path:circle(50% at 50% 50%);width:30px;height:30px;line-height:1.3}div.success{background:rgba(45,149,116,.15);border-left:4px solid rgba(45,149,116,.45)}div.error::before,div.success::before,div.warning::before{width:35px}div.success::before{content:"✔";background:rgba(45,149,116,.8);-webkit-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);height:35px;line-height:1.5}div.error,div.success,div.warning{margin:1.8rem 0 1.25rem 15px;padding:.8em;line-height:1.4;text-align:center;position:relative;clear:both}div.warning{background:rgba(220,117,47,.15);border-left:4px solid rgba(220,117,47,.45)}div.error::before,div.warning::before{content:"!";line-height:1.1}div.warning::before{background:rgba(220,117,47,.8);-webkit-clip-path:polygon(50% 0,0 100%,100% 100%);clip-path:polygon(50% 0,0 100%,100% 100%);height:35px}div.error{background:rgba(186,47,89,.15);border-left:4px solid rgba(186,47,89,.45)}div.error::before{background:rgba(186,47,89,.8);-webkit-clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);height:30px}#footnotes li,#footnotes p,.org-ref-bib,.org-ref-bib-h1{line-height:1.6}.org-ref-bib-h1{margin-top:70px;padding-top:30px;border-top-style:solid;border-width:1px 0 0;border-color:var(--back-light);font-size:20px}#footnotes li,#footnotes p,.org-ref-bib{font-size:15px}.org-ref-bib li>a:nth-child(2),.org-ref-bib li>a:nth-child(2):hover{background:0 0;text-shadow:none;text-decoration:none}.org-ref-bib .bib-link{font-family:"Open Sans",sans;font-weight:400;font-style:normal;font-size:12px;line-height:1.9;color:var(--text-light);background:0 0;text-shadow:none;text-decoration:none}pre.example,pre.src{border-left-style:solid;border-width:0 0 0 1px;border-left-color:var(--back-medium);margin:20px 0;padding:0 0 0 15px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:14px;line-height:1.9;overflow-x:visible;box-shadow:none;white-space:pre-wrap;position:relative}pre.example{border-left-style:dotted;border-width:0 0 0 2px}pre.src::before{display:inline-block;position:absolute;background-color:transparent;top:unset;bottom:-16px;left:20px;padding:0;border:0;font-size:80%;font-style:italic;color:var(--text-light)}pre.src:empty{display:none}code{color:var(--code-foreground);padding:0 5px}kbd{display:inline-block;padding:.25em .35em;font:80% SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:80%;color:var(--text-gray);vertical-align:middle;background-color:var(--back-light);border:1px solid #91959a88;border-radius:.35em;box-shadow:inset 0 -1px 0 #91959a88}li code{font-size:14px}code,dl li p,li p code,ol li p,ul li p{font-size:15px}details.code{position:relative}details.code summary{position:relative;left:-3px;padding-left:10px;padding-bottom:4px;margin-left:-10px;z-index:1;outline:0;font-family:"Open Sans",sans;font-weight:400;font-style:normal;font-size:12px;line-height:1.9;color:var(--text-light)}details.code summary .name{font-size:14px;color:var(--text-medium);margin-right:.7em}code,details.code summary .lang{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}details.code summary .lang{font-style:italic}details.code summary::marker{color:var(--back-medium)}details.code[open] summary{margin-bottom:-32px}details.code[open] summary.named{margin-bottom:-26px}details.code:not([open]) summary{margin-bottom:-5px}p+details.code{margin-top:-20px}li p+details.code{margin-top:-5px}.example,.src{color:var(--code-foreground)}.example .org-keyword,.src .org-keyword{color:#3a81c3}.example .org-variable-name,.src .org-variable-name{color:#715ab1}.example .org-rainbow-delimiters-depth-1,.example .org-rainbow-delimiters-depth-2,.example .org-rainbow-delimiters-depth-3,.example .org-rainbow-delimiters-depth-4,.example .org-rainbow-delimiters-depth-5,.example .org-rainbow-delimiters-depth-6,.example .org-rainbow-delimiters-depth-7,.example .org-rainbow-delimiters-depth-8,.example .org-rainbow-delimiters-depth-9,.src .org-rainbow-delimiters-depth-1,.src .org-rainbow-delimiters-depth-2,.src .org-rainbow-delimiters-depth-3,.src .org-rainbow-delimiters-depth-4,.src .org-rainbow-delimiters-depth-5,.src .org-rainbow-delimiters-depth-6,.src .org-rainbow-delimiters-depth-7,.src .org-rainbow-delimiters-depth-8,.src .org-rainbow-delimiters-depth-9{color:#555}.example .org-string,.src .org-string{color:#2d9574}.example .org-comment,.example .org-comment-delimiter,.src .org-comment,.src .org-comment-delimiter{color:#555}.example .org-function-name,.src .org-function-name{color:var(--code-func)}.example .org-constant,.example .org-highlight-numbers-number,.src .org-constant,.src .org-highlight-numbers-number{color:var(--code-const)}.gutter{position:absolute;top:0;left:-2.5rem;width:2rem;padding-right:.3rem;padding-top:5px;height:calc(100% - 10px);z-index:1;transition:opacity 200ms;opacity:0;font-size:15px}.gutter:hover{opacity:1}.gutter *{display:block;width:100%;text-align:right;padding:0;margin:0;color:var(--text-light)}#content .page-intro p a:hover:visited,#content .page-intro p a:visited,#footnotes a:hover:visited,#footnotes a:visited,.gutter :hover{color:var(--text-gray)}.gutter :active{font-weight:700}.gutter a{text-decoration:none;font-size:110%}.gutter button{background:0 0;border:0}pre.src-asymptote::before{content:'Asymptote'}pre.src-authinfo::before{content:'Authinfo'}pre.src-awk::before{content:'Awk'}pre.src-C::before{content:'C'}pre.src-clojure::before{content:'Clojure'}pre.src-css::before{content:'CSS'}pre.src-D::before{content:'D'}pre.src-ditaa::before{content:'ditaa'}pre.src-dot::before{content:'Graphviz'}pre.src-calc::before{content:'Emacs Calc'}pre.src-emacs-lisp::before{content:'Emacs Lisp'}pre.src-fortran::before{content:'Fortran'}pre.src-gnuplot::before{content:'gnuplot'}pre.src-haskell::before{content:'Haskell'}pre.src-hledger::before{content:'hledger'}pre.src-java::before{content:'Java'}pre.src-js::before{content:'Javascript'}pre.src-latex::before{content:'LaTeX'}pre.src-ledger::before{content:'Ledger'}pre.src-lisp::before{content:'Lisp'}pre.src-lilypond::before{content:'Lilypond'}pre.src-lua::before{content:'Lua'}pre.src-matlab::before{content:'MATLAB'}pre.src-mscgen::before{content:'Mscgen'}pre.src-ocaml::before{content:'Objective Caml'}pre.src-octave::before{content:'Octave'}pre.src-org::before{content:'Org mode'}pre.src-oz::before{content:'OZ'}pre.src-plantuml::before{content:'Plantuml'}pre.src-processing::before{content:'Processing.js'}pre.src-python::before{content:'Python'}pre.src-R::before{content:'R'}pre.src-ruby::before{content:'Ruby'}pre.src-sass::before{content:'Sass'}pre.src-scheme::before{content:'Scheme'}pre.src-screen::before{content:'Gnu Screen'}pre.src-sed::before{content:'Sed'}pre.src-sh::before{content:'shell'}pre.src-sql::before{content:'SQL'}pre.src-sqlite::before{content:'SQLite'}pre.src-forth::before{content:'Forth'}pre.src-io::before{content:'IO'}pre.src-J::before{content:'J'}pre.src-makefile::before{content:'Makefile'}pre.src-maxima::before{content:'Maxima'}pre.src-perl::before{content:'Perl'}pre.src-picolisp::before{content:'Pico Lisp'}pre.src-scala::before{content:'Scala'}pre.src-shell::before{content:'Shell Script'}pre.src-systemd::before{content:'Systemd'}pre.src-ebnf2ps::before{content:'ebfn2ps'}pre.src-cpp::before{content:'C++'}pre.src-abc::before{content:'ABC'}pre.src-coq::before{content:'Coq'}pre.src-groovy::before{content:'Groovy'}pre.src-bash::before{content:'bash'}pre.src-csh::before{content:'csh'}pre.src-ash::before{content:'ash'}pre.src-dash::before{content:'dash'}pre.src-ksh::before{content:'ksh'}pre.src-mksh::before{content:'mksh'}pre.src-posh::before{content:'posh'}pre.src-ada::before{content:'Ada'}pre.src-asm::before{content:'Assembler'}pre.src-caml::before{content:'Caml'}pre.src-delphi::before{content:'Delphi'}pre.src-html::before{content:'HTML'}pre.src-idl::before{content:'IDL'}pre.src-mercury::before{content:'Mercury'}pre.src-metapost::before{content:'MetaPost'}pre.src-modula-2::before{content:'Modula-2'}pre.src-pascal::before{content:'Pascal'}pre.src-ps::before{content:'PostScript'}pre.src-prolog::before{content:'Prolog'}pre.src-simula::before{content:'Simula'}pre.src-tcl::before{content:'tcl'}pre.src-tex::before{content:'LaTeX'}pre.src-plain-tex::before{content:'TeX'}pre.src-verilog::before{content:'Verilog'}pre.src-vhdl::before{content:'VHDL'}pre.src-nxml::before,pre.src-xml::before{content:'XML'}pre.src-conf::before{content:'Configuration File'}.dropcap{float:left;font-size:55px;font-style:normal;line-height:.1;margin-right:.2em;margin-top:.5em;padding:0}figure,th.org-center,th.org-left,th.org-right{text-align:center}#footnotes,figure figcaption{margin-top:10px;font-family:"Open Sans",sans;font-weight:400;font-size:15px;line-height:1.6;color:var(--text-gray)}img.zoomTarget:hover{cursor:default!important}img,object[type="image/svg+xml"]{filter:invert(7%) sepia(4%);max-width:100%}.org-svg{width:90%}#footnotes{margin-top:70px;padding-top:30px;border-top-style:solid;border-width:1px 0 0;border-color:var(--back-light)}#footnotes h2.footnotes{margin-top:0;margin-bottom:30px;font-family:"Open Sans",sans;font-size:18px;letter-spacing:5px;display:none}#footnotes .footnum{color:var(--text-dark)}h1,h2,h3,h4,h5,h6{font-family:"et-book",serif;font-weight:400;margin-bottom:0;margin-top:60px;padding-left:30px;margin-left:-30px;position:relative}h1>a[aria-hidden=true],h2>a[aria-hidden=true],h3>a[aria-hidden=true],h4>a[aria-hidden=true],h5>a[aria-hidden=true],h6>a[aria-hidden=true]{color:var(--back-medium);position:relative;top:.06em;line-height:1;font-size:110%;padding-left:.2em;text-decoration:none;visibility:hidden}h1>a[aria-hidden=true]:hover,h2>a[aria-hidden=true]:hover,h3>a[aria-hidden=true]:hover,h4>a[aria-hidden=true]:hover,h5>a[aria-hidden=true]:hover,h6>a[aria-hidden=true]:hover{color:var(--text-light)}h1:hover>a[aria-hidden=true],h2:hover>a[aria-hidden=true],h3:hover>a[aria-hidden=true],h4:hover>a[aria-hidden=true],h5:hover>a[aria-hidden=true],h6:hover>a[aria-hidden=true]{visibility:visible}h1{font-size:40px}.outline-2 h2,h2{font-size:30px}h3{font-size:24px}h4,h5,h6{font-size:20px}h4,h6{font-style:italic}h5{font-variant:small-caps}h6{font-size:18px}.section-number-1,.section-number-2,.section-number-3,.section-number-4,.section-number-5,.section-number-6{font-family:"Open Sans",sans;font-weight:400;font-style:normal;font-size:inherit;color:var(--text-light);line-height:1}@media (min-width:1000px){.section-number-1,.section-number-2,.section-number-3,.section-number-4,.section-number-5,.section-number-6{position:absolute;transform:translateX(-100%) translateX(-10px)}}.outline-text-2:-moz-only-whitespace+.outline-3>h3,.outline-text-2:empty+.outline-3>h3{margin-top:20px}.outline-text-3:-moz-only-whitespace+.outline-4>h4,.outline-text-3:empty+.outline-4>h4,.outline-text-4:-moz-only-whitespace+.outline-5>h5,.outline-text-4:empty+.outline-5>h5{margin-top:15px}.outline-text-5:-moz-only-whitespace+.outline-6>h6,.outline-text-5:empty+.outline-6>h6{margin-top:10px}hr{border:0;border-top-style:solid;border-top-width:1px;color:var(--back-medium);margin-bottom:30px;margin-top:40px}a{color:inherit}dl a,figcaption a,li a,p a,table a{border-radius:1px}.page-tags a,dl a,figcaption a,li a,p a,table a{background-image:linear-gradient(var(--text-dark),var(--text-dark));background-size:1px 1px;background-repeat:repeat-x;background-position:0 95%;text-decoration:none}#content .page-intro p a::selection,#footnotes a::selection,.page-tags a::selection,dl a::selection,figcaption a::selection,li a::selection,p a::selection,table a::selection{background:var(--back-medium)}#content .page-intro p a *,#content .page-intro p a :after,#content .page-intro p a :before,#content .page-intro p a:after,#content .page-intro p a:before,#footnotes a *,#footnotes a :after,#footnotes a :before,#footnotes a:after,#footnotes a:before,.page-tags a *,.page-tags a :after,.page-tags a :before,.page-tags a:after,.page-tags a:before,dl a *,dl a :after,dl a :before,dl a:after,dl a:before,figcaption a *,figcaption a :after,figcaption a :before,figcaption a:after,figcaption a:before,li a *,li a :after,li a :before,li a:after,li a:before,p a *,p a :after,p a :before,p a:after,p a:before,table a *,table a :after,table a :before,table a:after,table a:before{text-shadow:none}.page-tags a:visited,dl a:visited,figcaption a:visited,li a:visited,p a:visited,table a:visited{color:var(--text-dark)}.page-tags a:hover,dl a:hover,figcaption a:hover,li a:hover,p a:hover,table a:hover{opacity:.9;filter:drop-shadow(1px 1px 1px var(--back-white));background-image:linear-gradient(var(--text-dark),var(--text-dark));background-repeat:repeat-x;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23000000' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E")!important;background-position:0 100%;background-size:.8em auto;text-decoration:none}.page-tags a:hover::selection,.page-tags a[href^="#"]::selection,.page-tags a[href^="#"]:hover::selection,dl a:hover::selection,dl a[href^="#"]::selection,dl a[href^="#"]:hover::selection,figcaption a:hover::selection,figcaption a[href^="#"]::selection,figcaption a[href^="#"]:hover::selection,li a:hover::selection,li a[href^="#"]::selection,li a[href^="#"]:hover::selection,p a:hover::selection,p a[href^="#"]::selection,p a[href^="#"]:hover::selection,table a:hover::selection,table a[href^="#"]::selection,table a[href^="#"]:hover::selection{background:var(--back-white)}.page-tags a[href^="#"],dl a[href^="#"],figcaption a[href^="#"],li a[href^="#"],p a[href^="#"],table a[href^="#"]{background-image:linear-gradient(var(--text-gray),var(--text-gray));background-size:1px 1px;background-repeat:repeat-x;background-position:0 95%}.page-tags a[href^="#"]:hover,dl a[href^="#"]:hover,figcaption a[href^="#"]:hover,li a[href^="#"]:hover,p a[href^="#"]:hover,table a[href^="#"]:hover{opacity:.9;filter:drop-shadow(1px 1px 1px var(--back-white));background-image:linear-gradient(var(--text-medium),var(--text-medium));background-size:1px 1px;background-repeat:repeat-x;background-position:0 95%}#theme-switch:checked~#page #breadcrumbs a:hover,#theme-switch:checked~#page #crosslinks a:not(.highlight):hover,#theme-switch:checked~#page .page-tags a:hover,#theme-switch:checked~#page dl a:hover,#theme-switch:checked~#page figcaption a:hover,#theme-switch:checked~#page li a:hover,#theme-switch:checked~#page p a:hover,#theme-switch:checked~#page table a:hover{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E")}:target::before{content:"🠖";position:absolute;left:-7rem;top:calc(.5em - 2rem);line-height:1;color:#e65353aa;font-size:3rem;font-style:normal}@media (max-width:1000px){:target::before{content:"🠔";left:unset;right:0}}#content .page-intro p a,#content .page-intro p a:hover,#footnotes a,#footnotes a:hover{background-image:linear-gradient(var(--text-gray),var(--text-gray));background-size:1px 1px;background-repeat:repeat-x;background-position:0 95%;border-radius:1px;text-decoration:none}#content .page-intro p a:hover::selection,#footnotes a:hover::selection{background:var(--back-medium)}#content .page-intro p a:hover *,#content .page-intro p a:hover :after,#content .page-intro p a:hover :before,#content .page-intro p a:hover:after,#content .page-intro p a:hover:before,#footnotes a:hover *,#footnotes a:hover :after,#footnotes a:hover :before,#footnotes a:hover:after,#footnotes a:hover:before{text-shadow:none}.btn,.btn:hover{background-image:none}.btn{padding:7px 14px;border-style:solid;border-width:1px;border-color:var(--back-light);border-radius:1px;font-family:"Open Sans",sans;font-variant:all-small-caps;font-size:14px;font-style:normal;letter-spacing:2px;cursor:pointer}.btn:hover{background-color:var(--back-light)}.btn.disabled,div.link-preview small{color:var(--text-light)}.btn.disabled:hover{cursor:default}.btn.small{border-style:solid;border-width:1px;border-color:var(--back-light);border-radius:1px;font-family:"Open Sans",sans;font-variant:all-small-caps;font-size:12px;font-style:normal;letter-spacing:2px;background-image:none;padding:3px 9px}.btn.small:hover{background-color:var(--back-light);background-image:none}.btn.highlight,.btn.primary{text-shadow:none;text-decoration:none}.btn.highlight{color:var(--text-dark);background-color:#ff0}.btn.primary{color:var(--back-white);background-color:var(--accent)}.btn.primary:hover,.done.active:hover,.page-tags a.active:hover,.tag>span.active:hover,.todo.active:hover{background-color:var(--back-light);background-image:none;color:var(--text-dark)}.image-link,.image-link:hover{background:0 0;text-shadow:none;text-decoration:none}div.link-preview{border:1px solid var(--back-medium);border-radius:.5em;overflow:hidden;position:relative;max-height:5em;padding-left:.5em}div.link-preview a{color:initial;text-decoration:none}div.link-preview img{border-right:1px solid var(--back-medium);float:left;height:5em;margin-left:-.5em;margin-right:.5em}div.link-preview p{margin:0;font-size:10pt}div.link-preview p b{font-size:11pt}div.link-preview small{float:right;font-family:sans;margin:.45em .6em}dl,ol,ul{list-style:none;list-style-position:outside;padding:0}dl dt::before,dl li::before,ol dt::before,ol li::before,ul dt::before,ul li::before{display:inline-block;width:1em;font-family:"Open Sans",sans;font-weight:400;font-size:15px;line-height:1.6;color:var(--text-gray)}dl li,ol li,ul li{margin:5px 0;font-size:14px}dl dt::before,ul li::before{content:"•";margin-left:-1em}ol{counter-reset:li}ol li::before{content:counter(li);margin-left:-1.5em;margin-right:.5em;text-align:right;direction:rtl}ol li{counter-increment:li}ol ol,ul ul{padding-left:20px}ol ol ol,ul ul ul{padding-left:30px}li p:first-child{display:inline-block;margin-bottom:0}dl dt{font-weight:400;margin-bottom:10px}dl dd{font-style:italic;margin-bottom:20px}li .checkbox{display:inline-block;width:.9em;height:.9em;border-radius:3px;margin:3px;top:4px;position:relative}li.on>.checkbox{background:#2d9574;box-shadow:0 0 2px #2d9574}li.trans>.checkbox{background:#dc752f;box-shadow:0 0 2px #dc752f}li.off>.checkbox{background:#ba2f59;box-shadow:0 0 2px #ba2f59;top:6px}li.on>.checkbox::after{content:'';height:.45em;width:.225em;-webkit-transform-origin:left top;transform-origin:left top;transform:scaleX(-1) rotate(135deg);border-right:2.8px solid #fff;border-top:2.8px solid #fff;opacity:.9;left:.1em;top:.45em;position:absolute}li.trans>.checkbox::after{content:'';font-weight:700;font-size:1.6em;position:absolute;top:.2em;left:.11em;width:.35em;height:.12em;background:#fff;opacity:.9;border-radius:.1em}li.off>.checkbox::after{content:'✖';color:#fff;opacity:.9;position:relative;top:-.5rem;left:.17em;font-size:.75em}#org-div-home-and-up{display:none!important}.outline-3 h3{font-style:normal}.outline-2 .section-number-2{font-size:30px}.outline-3 .section-number-3,.outline-3 h3{font-size:24px}.done,.timestamp,.timestamp-kwd,.todo{border-radius:1px;font-family:"Open Sans",sans;font-style:normal;background-color:var(--back-white)}.timestamp,.timestamp-kwd{font-weight:400;font-size:12px;line-height:1.9;color:var(--text-light)}.done,.todo{border-color:var(--back-light);font-variant:all-small-caps;font-size:max(.4em,10px);letter-spacing:2px;background-image:none;line-height:1;white-space:nowrap;vertical-align:middle;padding:.1em .5em;background-color:transparent;border:0;font-weight:700}.page-tags a:hover{background-color:var(--back-light)}.done:hover,.tag>span:hover,.todo:hover{background-color:var(--back-light);background-image:none}.done:not(.active),.page-tags a:not(.active),.tag>span:not(.active),.todo:not(.active){border-color:var(--back-white)}.done.active,.page-tags a.active,.tag>span.active,.todo.active{text-shadow:none;text-decoration:none;color:var(--back-white);background-color:var(--code-foreground)}.outline-2,.outline-3,.outline-4{contain:layout}.outline-2 .done,.outline-2 .todo,.outline-3 .done,.outline-3 .todo,.outline-4 .done,.outline-4 .todo{font-size:18px}.todo{color:#e33}.done,.priority{color:var(--text-light)}.tag>span{border-style:solid;border-width:1px;border-color:var(--back-light);font-family:"Open Sans",sans;font-variant:all-small-caps;font-size:max(.4em,10px);font-style:normal;letter-spacing:2px;background-image:none;line-height:1;white-space:nowrap;vertical-align:middle;padding:.1em .5em;background-color:var(--back-white);border-radius:100px}.priority{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.footref{text-shadow:none}.footpara{display:inline}.footdef{margin-bottom:1em}td.org-right{text-align:right}td.org-left{text-align:left}div.org-center,td.org-center{text-align:center}span.acr{font-variant-caps:all-small-caps;letter-spacing:.1em}.music-track{display:flex;justify-content:center;align-items:center;flex-wrap:wrap}.music-track img{height:6rem;margin-right:2rem}.music-track a{text-decoration:none}.music-track span{min-width:35%}div.table{position:relative}div.table .gutter{left:calc(20px - 2.5rem);padding-top:18px}div.table .tabular{max-width:100%;overflow-x:auto}table,table thead{font-family:"Open Sans",sans;font-size:15px}table{border-color:var(--text-light);border-left:transparent;border-right:transparent;border-style:solid;border-width:2px;border-collapse:collapse;margin:20px;padding:20px}table thead{font-weight:400;font-style:normal;line-height:1.9;color:var(--text-light)}table thead tr th{padding:4px 10px;background-color:#9991}table thead tr:last-of-type th{border-bottom:solid 1px var(--text-light)}table td,table th,table tr{border:0}table tbody tr td{border-top:0;padding:0 10px}table tr{line-height:1.9}table caption,table caption .table-number{font-family:"Open Sans",sans;font-weight:400}table caption{margin-bottom:10px;font-size:15px;line-height:1.6;color:var(--text-gray)}table caption .table-number{font-style:normal;font-size:12px;line-height:1.9;color:var(--text-light)}::-webkit-scrollbar{width:10px;height:8px}::-webkit-scrollbar-track{background:#9992}::-webkit-scrollbar-thumb{background:#ccc}::-webkit-scrollbar-thumb:hover{background:#888}@media (min-width:1280px){#table-of-contents{position:fixed;width:18rem;right:1rem;top:0;padding:1em;line-height:1.5;margin-top:4rem}#table-of-contents h2{margin-top:0}#table-of-contents #text-table-of-contents{position:relative}#table-of-contents #text-table-of-contents::after,#table-of-contents #text-table-of-contents::before{position:absolute;content:'';width:calc(100% - 10px);height:.7rem;left:0;z-index:1}#table-of-contents #text-table-of-contents::before{top:0;background:linear-gradient(180deg,var(--back-light) 0%,var(--back-light) 35%,transparent 100%)}#table-of-contents #text-table-of-contents::after{bottom:0;background:linear-gradient(0deg,var(--back-light) 0%,var(--back-light) 35%,transparent 100%)}#table-of-contents #text-table-of-contents>ul{list-style:none;padding:0;margin:0;max-height:calc(100vh - 5rem - 50px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}#table-of-contents #text-table-of-contents>ul ul{padding-left:2em}#table-of-contents #text-table-of-contents>ul li.active>ul,#table-of-contents #text-table-of-contents>ul ul.active{display:inline-block}#table-of-contents #text-table-of-contents>ul li.active>a,#table-of-contents #text-table-of-contents>ul li.active>label a{color:var(--text-dark)}#table-of-contents #text-table-of-contents>ul li.active>input:not(:checked)~label::after{transform:rotate(90deg);top:5px;opacity:.35}#table-of-contents #text-table-of-contents>ul>li:last-child{margin-bottom:2rem}}@media (min-width:1440px){#table-of-contents{width:20rem;right:2rem}}@media (min-width:1640px){#table-of-contents{right:5rem}}@media (min-width:2000px){#table-of-contents{width:25rem}}#table-of-contents #text-table-of-contents ul{width:100%}#table-of-contents #text-table-of-contents li input[type=checkbox],#table-of-contents #text-table-of-contents>ul ul{display:none}#table-of-contents #text-table-of-contents li label{display:inline-block;width:100%;position:relative}#table-of-contents #text-table-of-contents li a{display:inline-block;color:var(--text-gray);text-decoration:none!important;text-shadow:none;background:0 0!important}#table-of-contents #text-table-of-contents li label::after{content:"\25b6";color:var(--text-gray);margin-left:.5em;font-size:10px;display:inline-block;position:absolute;top:3.4px;left:-20px;opacity:.8}#table-of-contents #text-table-of-contents li input:checked~ul{display:inline-block!important}#table-of-contents #text-table-of-contents li input:checked~label a{font-weight:700}#table-of-contents #text-table-of-contents li input:checked~label::after{transform:rotate(90deg);top:5px}#table-of-contents #text-table-of-contents li::before{content:""!important}.page-tags a{border-style:solid;border-width:1px;border-color:var(--back-light);border-radius:1px;font-family:"Open Sans",sans;font-variant:all-small-caps;font-size:max(.4em,10px);font-style:normal;letter-spacing:2px;background-image:none;white-space:nowrap;vertical-align:middle;padding:.1em .5em;background-color:var(--back-white);margin-right:5px;line-height:3em}@media print{h2{page-break-before:always}h1,h2,h3,h4,h5{page-break-after:avoid}#switch-label,#table-of-contents #text-table-of-contents li label::after{display:none}#content,#page-header{margin-top:0}#table-of-contents #text-table-of-contents>ul ul{display:inline-block}#table-of-contents #text-table-of-contents>ul a::after{content:leader(".") target-counter(attr(href),page)}img{filter:none}}@page{size:auto;margin-top:4mm;margin-bottom:4mm}
+</style>
+</head>
+<body>
+<input type='checkbox' id='theme-switch'><div id='page'><label id='switch-label' for='theme-switch'></label><div id="content">
+<header class="page-header"><div class="page-meta"><!--<a href="https://github.com/Nan0Scho1ar/business_plan_template/commit/9cb2188" style="text-decoration: none"><code style="padding: 0; color: var(--text-light); font-size: inherit; opacity: 0.7">9cb2188</code></a>--> 2021-11-25 15:32 AEST, <a href="https://github.com/Nan0Scho1ar/business_plan_template/commit/9cb2188" style="text-decoration: none"><code style="padding: 0; color: var(--text-light); font-size: inherit; opacity: 0.7">9cb2188</code></a>, Nan0Scho1ar</div>
+
+<h1 class="title">Business Plan Template</h1>
+</header><nav id="table-of-contents">
+<h2><a href="#" style="color:inherit; text-decoration: none;">Table of Contents</a></h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org72faa5f">1. Business plan</a></li>
+<li><input type='checkbox' id='toc--org134611e'/><label for='toc--org134611e'><a href="#org134611e">2. Key details</a></label>
+<ul>
+<li><a href="#org24c67c5">2.1. Registration details</a></li>
+<li><a href="#org53a11bf">2.2. Contact details</a></li>
+<li><a href="#orgffbd844">2.3. Online and social media details</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--orgb707608'/><label for='toc--orgb707608'><a href="#orgb707608">3. The business</a></label>
+<ul>
+<li><input type='checkbox' id='toc--org3c7cbfe'/><label for='toc--org3c7cbfe'><a href="#org3c7cbfe">3.1. Plan summary</a></label>
+<ul>
+<li><a href="#org480ac2a">3.1.1. What our business does</a></li>
+<li><a href="#org04a48bb">3.1.2. Our target market</a></li>
+<li><a href="#orgfb96082">3.1.3. Our unique selling point</a></li>
+<li><a href="#orgf83f435">3.1.4. Our business goals</a></li>
+<li><a href="#org1d87345">3.1.5. Our history</a></li>
+</ul>
+</li>
+<li><a href="#org4278322">3.2. Our why</a></li>
+<li><a href="#org05f37bc">3.3. Our vision</a></li>
+<li><a href="#org4cb3e84">3.4. Our mission</a></li>
+<li><input type='checkbox' id='toc--org3cf324e'/><label for='toc--org3cf324e'><a href="#org3cf324e">3.5. Operations</a></label>
+<ul>
+<li><a href="#orgca8aadf">3.5.1. Products and services</a></li>
+<li><a href="#orgd59051d">3.5.2. Production</a></li>
+<li><a href="#org512d9d4">3.5.3. Sales and distribution channels</a></li>
+<li><a href="#orgd3266f2">3.5.4. Digital technology</a></li>
+<li><a href="#orgfe54123">3.5.5. Information management</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--orgb527516'/><label for='toc--orgb527516'><a href="#orgb527516">3.6. Assets</a></label>
+<ul>
+<li><a href="#org1435e56">3.6.1. Premises</a></li>
+<li><a href="#org95fbed2">3.6.2. Stock and inventory</a></li>
+<li><a href="#orgf64d2df">3.6.3. Equipment</a></li>
+<li><a href="#org31af632">3.6.4. Intellectual property</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--org40f157a'/><label for='toc--org40f157a'><a href="#org40f157a">3.7. Key people</a></label>
+<ul>
+<li><a href="#orgfbe883e">3.7.1. Our staff</a></li>
+<li><a href="#orgcd686a4">3.7.2. Sources of advice and support</a></li>
+<li><a href="#org901c63e">3.7.3. Skill and staff retention strategies</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--org52078d9'/><label for='toc--org52078d9'><a href="#org52078d9">3.8. The market</a></label>
+<ul>
+<li><a href="#org3b8f46c">3.8.1. The problem</a></li>
+<li><a href="#org639ec30">3.8.2. Our solution</a></li>
+<li><a href="#org727cc5f">3.8.3. Our target market</a></li>
+<li><a href="#orge28e8ee">3.8.4. Advertising and promotion</a></li>
+<li><a href="#orgff887ce">3.8.5. The competition</a></li>
+<li><a href="#org45e81dc">3.8.6. Pricing strategy</a></li>
+<li><a href="#orgb52e9e0">3.8.7. SWOT analysis</a></li>
+<li><a href="#orgb614f76">3.8.8. How we’ll address each weakness and threat</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--orgdbc04e3'/><label for='toc--orgdbc04e3'><a href="#orgdbc04e3">3.9. Risk management</a></label>
+<ul>
+<li><a href="#orgcb50c71">3.9.1. Risk assessment</a></li>
+<li><a href="#org7b7dc6a">3.9.2. Insurance</a></li>
+<li><a href="#orgf7fe30c">3.9.3. Succession plan</a></li>
+<li><a href="#orge9f00f0">3.9.4. Laws we’ll need to comply with</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--orge65da68'/><label for='toc--orge65da68'><a href="#orge65da68">3.10. Goals and actions</a></label>
+<ul>
+<li><a href="#org0a2e079">3.10.1. Goals for next year</a></li>
+<li><a href="#orgcf0e64e">3.10.2. Goals for the next 3 years</a></li>
+</ul>
+</li>
+<li><input type='checkbox' id='toc--org1859b67'/><label for='toc--org1859b67'><a href="#org1859b67">3.11. The finances</a></label>
+<ul>
+<li><a href="#orged660bc">3.11.1. Finance needed</a></li>
+<li><a href="#orgadfc9be">3.11.2. Sources of funding</a></li>
+<li><a href="#org119e142">3.11.3. Current finances</a></li>
+<li><a href="#org31b9c7c">3.11.4. Balance forecast</a></li>
+<li><a href="#org810cc53">3.11.5. Profit and loss forecast</a></li>
+<li><a href="#orge7bf81e">3.11.6. Cash flow forecast</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1682e80">4. Supporting document checklist</a></li>
+</ul>
+</div>
+</nav>
+<p>
+<code>Org file template based on the business plan template found at:</code> <a href="https://business.gov.au/businessplan">https://business.gov.au/businessplan</a>
+</p>
+
+<p>
+<code>Insert your business logo</code>
+</p>
+
+<p>
+<code>Enter your business name</code>
+</p>
+
+
+<div id="outline-container-org72faa5f" class="outline-2">
+<h2 id="org72faa5f"><span class="section-number-2">1.</span> Business plan<a aria-hidden="true" href="#org72faa5f">#</a> </h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<code>Use the italicised guidance throughout this template</code>
+<code>for help completing your business plan.</code>
+<code>You may wish to remove this text before you finalise your plan.</code>
+</p>
+
+<p>
+Date:
+</p>
+</div>
+</div>
+
+<div id="outline-container-org134611e" class="outline-2">
+<h2 id="org134611e"><span class="section-number-2">2.</span> Key details<a aria-hidden="true" href="#org134611e">#</a> </h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org24c67c5" class="outline-3">
+<h3 id="org24c67c5"><span class="section-number-3">2.1.</span> Registration details<a aria-hidden="true" href="#org24c67c5">#</a> </h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<code>Find out about business registrations and choosing a business structure.</code>
+Business name:
+</p>
+
+<p>
+Date registered:
+</p>
+
+<p>
+State registered in:
+</p>
+
+<p>
+Business structure:
+</p>
+
+<p>
+Australian business number (ABN):
+</p>
+
+<p>
+Licences and permits: <code>Australian, state and local.
+Examples: disposal of waste, safe food preparation</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org53a11bf" class="outline-3">
+<h3 id="org53a11bf"><span class="section-number-3">2.2.</span> Contact details<a aria-hidden="true" href="#org53a11bf">#</a> </h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Name:
+</p>
+
+<p>
+Phone:
+</p>
+
+<p>
+Mobile:
+</p>
+
+<p>
+Email:
+</p>
+
+<p>
+Address:
+</p>
+</div>
+</div>
+<div id="outline-container-orgffbd844" class="outline-3">
+<h3 id="orgffbd844"><span class="section-number-3">2.3.</span> Online and social media details<a aria-hidden="true" href="#orgffbd844">#</a> </h3>
+<div class="outline-text-3" id="text-2-3">
+<div id='orge8411f7' class='table'>
+<div class='gutter'><a href='#orge8411f7'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Website</th>
+<th scope="col" class="org-left">Address/details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb707608" class="outline-2">
+<h2 id="orgb707608"><span class="section-number-2">3.</span> The business<a aria-hidden="true" href="#orgb707608">#</a> </h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3c7cbfe" class="outline-3">
+<h3 id="org3c7cbfe"><span class="section-number-3">3.1.</span> Plan summary<a aria-hidden="true" href="#org3c7cbfe">#</a> </h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<code>Complete this section last so you can summarise</code>
+<code>information from the rest of your plan.</code>
+</p>
+</div>
+<div id="outline-container-org480ac2a" class="outline-4">
+<h4 id="org480ac2a"><span class="section-number-4">3.1.1.</span> What our business does<a aria-hidden="true" href="#org480ac2a">#</a> </h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+The products or services we sell.
+</p>
+</div>
+</div>
+<div id="outline-container-org04a48bb" class="outline-4">
+<h4 id="org04a48bb"><span class="section-number-4">3.1.2.</span> Our target market<a aria-hidden="true" href="#org04a48bb">#</a> </h4>
+</div>
+<div id="outline-container-orgfb96082" class="outline-4">
+<h4 id="orgfb96082"><span class="section-number-4">3.1.3.</span> Our unique selling point<a aria-hidden="true" href="#orgfb96082">#</a> </h4>
+</div>
+<div id="outline-container-orgf83f435" class="outline-4">
+<h4 id="orgf83f435"><span class="section-number-4">3.1.4.</span> Our business goals<a aria-hidden="true" href="#orgf83f435">#</a> </h4>
+</div>
+<div id="outline-container-org1d87345" class="outline-4">
+<h4 id="org1d87345"><span class="section-number-4">3.1.5.</span> Our history<a aria-hidden="true" href="#org1d87345">#</a> </h4>
+<div class="outline-text-4" id="text-3-1-5">
+<p>
+Industry experience, major achievements.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4278322" class="outline-3">
+<h3 id="org4278322"><span class="section-number-3">3.2.</span> Our why<a aria-hidden="true" href="#org4278322">#</a> </h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<code>Consider why you started this business.</code>
+<code>Why are you personally invested in this business idea?</code>
+<code>Example: To be the go-to supplier of high quality,</code>
+<code>sustainable coffee in Australia.</code>
+</p>
+
+<p>
+The inspiration behind the business.
+</p>
+</div>
+</div>
+<div id="outline-container-org05f37bc" class="outline-3">
+<h3 id="org05f37bc"><span class="section-number-3">3.3.</span> Our vision<a aria-hidden="true" href="#org05f37bc">#</a> </h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+<code>Consider what you want your business to accomplish in the long term.</code>
+<code>What are your ultimate goals? Be passionate, powerful and inspiring.</code>
+<code>Example: To be the go-to supplier of high quality,</code>
+<code>sustainable coffee in Australia and</code>
+<code>reduce environmental impacts through promoting sustainable shopping practices.</code>
+</p>
+
+<p>
+Our hopes, dreams and where we aim to go.
+</p>
+</div>
+</div>
+<div id="outline-container-org4cb3e84" class="outline-3">
+<h3 id="org4cb3e84"><span class="section-number-3">3.4.</span> Our mission<a aria-hidden="true" href="#org4cb3e84">#</a> </h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+<code>Consider the purpose of your business and define</code>
+<code>what it does for your customers.</code>
+<code>What do you do, how do you do it and why do you do it?</code>
+<code>Example: We supply high quality, sustainably produced coffee for all coffee</code>
+<code>lovers to enjoy while minimising their environmental impact.</code>
+</p>
+
+<p>
+Who we are and why we exist.
+</p>
+</div>
+</div>
+<div id="outline-container-org3cf324e" class="outline-3">
+<h3 id="org3cf324e"><span class="section-number-3">3.5.</span> Operations<a aria-hidden="true" href="#org3cf324e">#</a> </h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgca8aadf" class="outline-4">
+<h4 id="orgca8aadf"><span class="section-number-4">3.5.1.</span> Products and services<a aria-hidden="true" href="#orgca8aadf">#</a> </h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+What we’re selling.
+</p>
+<div id='orga96fa9d' class='table'>
+<div class='gutter'><a href='#orga96fa9d'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Product/service</th>
+<th scope="col" class="org-left">Description</th>
+<th scope="col" class="org-left">Unit price (incl. GST)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-orgd59051d" class="outline-4">
+<h4 id="orgd59051d"><span class="section-number-4">3.5.2.</span> Production<a aria-hidden="true" href="#orgd59051d">#</a> </h4>
+<div class="outline-text-4" id="text-3-5-2">
+<p>
+<code>Example: Intrinsic Coffee sources premium beans from Bean There Growers.</code>
+<code>Our packaging is printed by an external provider.</code>
+<code>We process and package beans on site with strict quality controls in place.</code>
+</p>
+
+<p>
+How we produce our products or services and where we get our main supplies from.
+</p>
+</div>
+</div>
+<div id="outline-container-org512d9d4" class="outline-4">
+<h4 id="org512d9d4"><span class="section-number-4">3.5.3.</span> Sales and distribution channels<a aria-hidden="true" href="#org512d9d4">#</a> </h4>
+<div class="outline-text-4" id="text-3-5-3">
+<p>
+The channels we’ll use to distribute our product or service to customers.
+</p>
+<div id='orgf4a8fe6' class='table'>
+<div class='gutter'><a href='#orgf4a8fe6'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Channel</th>
+<th scope="col" class="org-left">Used for</th>
+<th scope="col" class="org-left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>Select a channel</code></td>
+<td class="org-left"><code>Example: Selling our coffee beans internationally online.</code></td>
+<td class="org-left"><code>Example: Beans Online account for 20% of sales.</code></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-orgd3266f2" class="outline-4">
+<h4 id="orgd3266f2"><span class="section-number-4">3.5.4.</span> Digital technology<a aria-hidden="true" href="#orgd3266f2">#</a> </h4>
+<div class="outline-text-4" id="text-3-5-4">
+<p>
+<code>Learn about selling online and digital options to</code>
+<code>improve your business efficiency and profitability.</code>
+<code>Examples: online sales, accounting software, customer database</code>
+</p>
+
+<p>
+Technology we plan to use for our business.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfe54123" class="outline-4">
+<h4 id="orgfe54123"><span class="section-number-4">3.5.5.</span> Information management<a aria-hidden="true" href="#orgfe54123">#</a> </h4>
+<div class="outline-text-4" id="text-3-5-5">
+<p>
+<code>How do you collect, store and use customer and stock information?</code>
+<code>Do you back up this information?</code>
+<code>How do you do this and how often? Make sure you comply with</code>
+<code>industry standards and  legislation.</code>
+<code>Examples: online sales, accounting software, customer database</code>
+</p>
+
+<p>
+How we collect, store and use customer and stock information.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb527516" class="outline-3">
+<h3 id="orgb527516"><span class="section-number-3">3.6.</span> Assets<a aria-hidden="true" href="#orgb527516">#</a> </h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org1435e56" class="outline-4">
+<h4 id="org1435e56"><span class="section-number-4">3.6.1.</span> Premises<a aria-hidden="true" href="#org1435e56">#</a> </h4>
+<div class="outline-text-4" id="text-3-6-1">
+<p>
+<code>Describe your business premises, the location,</code>
+<code>facilities and whether you own or lease them.</code>
+<code>Visit our Business premises page for more information.</code>
+<code>Example: We own a café shopfront in the Sydney CBD.</code>
+<code>The location has significant foot traffic and visibility.</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org95fbed2" class="outline-4">
+<h4 id="org95fbed2"><span class="section-number-4">3.6.2.</span> Stock and inventory<a aria-hidden="true" href="#org95fbed2">#</a> </h4>
+<div class="outline-text-4" id="text-3-6-2">
+<p>
+<code>What stock do you have? Describe how you store and manage stock.</code>
+<code>See our managing inventory page for more information.</code>
+<code>Example: We have 300 kg of coffee beans.</code>
+<code>We store stock onsite and it is replaced every 2 months.</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf64d2df" class="outline-4">
+<h4 id="orgf64d2df"><span class="section-number-4">3.6.3.</span> Equipment<a aria-hidden="true" href="#orgf64d2df">#</a> </h4>
+<div class="outline-text-4" id="text-3-6-3">
+<div id='orgbd2186a' class='table'>
+<div class='gutter'><a href='#orgbd2186a'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Equipment</th>
+<th scope="col" class="org-left">Date bought or leased</th>
+<th scope="col" class="org-left">Cost ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>Examples: computers, machinery, vehicles</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-org31af632" class="outline-4">
+<h4 id="org31af632"><span class="section-number-4">3.6.4.</span> Intellectual property<a aria-hidden="true" href="#org31af632">#</a> </h4>
+<div class="outline-text-4" id="text-3-6-4">
+<p>
+<code>List any intellectual property that you have registered or need to protect.</code>
+<code>For more information, check our intellectual property guide.</code>
+<code>Example: Intrinsic Coffee logo is registered as a trade mark.</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org40f157a" class="outline-3">
+<h3 id="org40f157a"><span class="section-number-3">3.7.</span> Key people<a aria-hidden="true" href="#org40f157a">#</a> </h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-orgfbe883e" class="outline-4">
+<h4 id="orgfbe883e"><span class="section-number-4">3.7.1.</span> Our staff<a aria-hidden="true" href="#orgfbe883e">#</a> </h4>
+<div class="outline-text-4" id="text-3-7-1">
+<p>
+<code>List your existing staff and any staff required for your business.</code>
+<code>Include yourself and list any major achievements</code>
+<code>and relevant business experience.</code>
+</p>
+<div id='org457c681' class='table'>
+<div class='gutter'><a href='#org457c681'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Role</th>
+<th scope="col" class="org-left">Name (If role is filled.)</th>
+<th scope="col" class="org-left">Skills and experience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>Examples: owner, manager, casual employee</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-orgcd686a4" class="outline-4">
+<h4 id="orgcd686a4"><span class="section-number-4">3.7.2.</span> Sources of advice and support<a aria-hidden="true" href="#orgcd686a4">#</a> </h4>
+<div class="outline-text-4" id="text-3-7-2">
+<p>
+<code>Sources of advice and support for your business</code>
+<code>could include a business mentor,</code>
+<code>your accountant, a valued supplier or even an industry association.</code>
+</p>
+
+<p>
+External people or organisations that provide support to our business.
+</p>
+<div id='org8f5383c' class='table'>
+<div class='gutter'><a href='#org8f5383c'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Support type</th>
+<th scope="col" class="org-left">Name</th>
+<th scope="col" class="org-left">Skills and experience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>Example: Accountant.</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-org901c63e" class="outline-4">
+<h4 id="org901c63e"><span class="section-number-4">3.7.3.</span> Skill and staff retention strategies<a aria-hidden="true" href="#org901c63e">#</a> </h4>
+<div class="outline-text-4" id="text-3-7-3">
+<p>
+<code>Read about developing and maintaining staff skills.</code>
+<code>Example: The manager regularly checks in with staff, all staff attend monthly</code>
+<code>team meetings, we offer free courses to maintain staff skills and involve</code>
+<code>staff in our professional development planning process.</code>
+</p>
+
+<p>
+How we keep our staff working for us and maintain their skills.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org52078d9" class="outline-3">
+<h3 id="org52078d9"><span class="section-number-3">3.8.</span> The market<a aria-hidden="true" href="#org52078d9">#</a> </h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-org3b8f46c" class="outline-4">
+<h4 id="org3b8f46c"><span class="section-number-4">3.8.1.</span> The problem<a aria-hidden="true" href="#org3b8f46c">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-1">
+<p>
+<code>What issues do your potential customers face in the market? Is there a</code>
+<code>lack of your service type in a particular suburb?</code>
+<code>Is the product supplied by other businesses expensive?</code>
+<code>Example: There’s an overwhelming choice of coffee blends in the market.</code>
+<code>It’s hard for customers to know what they’re buying.</code>
+</p>
+
+<p>
+The market problem/s that we aim to solve for customers.
+</p>
+</div>
+</div>
+<div id="outline-container-org639ec30" class="outline-4">
+<h4 id="org639ec30"><span class="section-number-4">3.8.2.</span> Our solution<a aria-hidden="true" href="#org639ec30">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-2">
+<p>
+<code>Example: Intrinsic Coffee sells a small range of high-quality coffee.</code>
+<code>We don’t use fancy names for our blends, so people know what they’re buying.</code>
+</p>
+
+<p>
+How our business solves the problem – our unique selling point.
+This is how we’ll succeed in the market.
+</p>
+</div>
+</div>
+<div id="outline-container-org727cc5f" class="outline-4">
+<h4 id="org727cc5f"><span class="section-number-4">3.8.3.</span> Our target market<a aria-hidden="true" href="#org727cc5f">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-3">
+<p>
+<code>Not everyone will want your product or service, so make sure you research</code>
+<code>the market and have a clear picture of who you’re targeting.</code>
+<code>This helps focus your marketing efforts and improve your chances of success.</code>
+<code>Describe your targeted customers for example by gender,</code>
+<code>age, income, location or education.</code>
+<code>Example: Our products are targeted at adults over 30</code>
+<code>with a medium to high disposable income.</code>
+</p>
+
+<p>
+The group of customers that we aim to sell our products or services to.
+</p>
+</div>
+</div>
+<div id="outline-container-orge28e8ee" class="outline-4">
+<h4 id="orge28e8ee"><span class="section-number-4">3.8.4.</span> Advertising and promotion<a aria-hidden="true" href="#orge28e8ee">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-4">
+<p>
+<code>Choose channels that suit your target market. For example, social media</code>
+<code>use varies across different age groups. Learn about choosing the best</code>
+<code>channels to communicate with your customers.</code>
+</p>
+
+<p>
+The channels we’ll use to communicate with our target customers.
+</p>
+
+<div id='orgad9652f' class='table'>
+<div class='gutter'><a href='#orgad9652f'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Channel</th>
+<th scope="col" class="org-left">Used for</th>
+<th scope="col" class="org-left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>Example: Promotion prior to launch.</code></td>
+<td class="org-left"><code>Example: We’ll use regular Facebook posts to promote the product and offer discounts to our first 20 customers.</code></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+
+<div id="outline-container-orgff887ce" class="outline-4">
+<h4 id="orgff887ce"><span class="section-number-4">3.8.5.</span> The competition<a aria-hidden="true" href="#orgff887ce">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-5">
+<p>
+The top 3 businesses we’re competing against, what they do well and not so well.
+What we’ll do differently to succeed in the market.
+</p>
+<div id='org46a9ffa' class='table'>
+<div class='gutter'><a href='#org46a9ffa'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Competitor name</th>
+<th scope="col" class="org-left">Strengths</th>
+<th scope="col" class="org-left">Weaknesses</th>
+<th scope="col" class="org-left">What we’ll do differently</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>Example: Sludge International Coffee.</code></td>
+<td class="org-left"><code>Example: Low product prices.</code></td>
+<td class="org-left"><code>Example: Low quality product, unsustainable production.</code></td>
+<td class="org-left"><code>Example: We only sell high quality, sustainably produced beans.</code></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-org45e81dc" class="outline-4">
+<h4 id="org45e81dc"><span class="section-number-4">3.8.6.</span> Pricing strategy<a aria-hidden="true" href="#org45e81dc">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-6">
+<p>
+<code>Explain your pricing strategy and why you chose it.</code>
+<code>Example: Our coffee beans are sold at cost of production and distribution
+plus</code> <code>a mark-up of 50%. This ensures we remain competitive and make a profit.</code>
+</p>
+
+<p>
+How we set prices for our products/services.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb52e9e0" class="outline-4">
+<h4 id="orgb52e9e0"><span class="section-number-4">3.8.7.</span> SWOT analysis<a aria-hidden="true" href="#orgb52e9e0">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-7">
+<p>
+<code>Learn how to complete a SWOT analysis for your business.</code>
+Our business strengths, weaknesses, opportunities and threats.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orge938994"></a>Strengths<br>
+<div class="outline-text-5" id="text-3-8-7-1">
+<p>
+<code>Example: Premises are in a high traffic area with good visibility.</code>
+</p>
+
+<p>
+What’s good about our business.
+</p>
+</div>
+</li>
+<li><a id="org8d2a312"></a>Weaknesses<br>
+<div class="outline-text-5" id="text-3-8-7-2">
+<p>
+<code>Example: The business has no business website
+and there are high rental costs.</code>
+</p>
+
+<p>
+What’s not so good about our business.
+</p>
+</div>
+</li>
+<li><a id="org3e45666"></a>Opportunities<br>
+<div class="outline-text-5" id="text-3-8-7-3">
+<p>
+<code>Example: The market is growing rapidly.</code>
+</p>
+
+<p>
+External factors we could take advantage of.
+</p>
+</div>
+</li>
+<li><a id="orgf7d3b0a"></a>Threats<br>
+<div class="outline-text-5" id="text-3-8-7-4">
+<p>
+External factors that could cause problems for us.
+<code>Example: A new competitor could target the same market.</code>
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgb614f76" class="outline-4">
+<h4 id="orgb614f76"><span class="section-number-4">3.8.8.</span> How we’ll address each weakness and threat<a aria-hidden="true" href="#orgb614f76">#</a> </h4>
+<div class="outline-text-4" id="text-3-8-8">
+<p>
+<code>Example: We’ll investigate alternative lower cost premises</code>
+<code>with good visibility.</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdbc04e3" class="outline-3">
+<h3 id="orgdbc04e3"><span class="section-number-3">3.9.</span> Risk management<a aria-hidden="true" href="#orgdbc04e3">#</a> </h3>
+<div class="outline-text-3" id="text-3-9">
+</div>
+<div id="outline-container-orgcb50c71" class="outline-4">
+<h4 id="orgcb50c71"><span class="section-number-4">3.9.1.</span> Risk assessment<a aria-hidden="true" href="#orgcb50c71">#</a> </h4>
+<div class="outline-text-4" id="text-3-9-1">
+<p>
+<code>Learn about types of risk that could affect your business and how to assess</code>
+<code>and manage risks to your business.</code>
+</p>
+
+<p>
+Risks that could impact our business and what we’ll do to protect it.
+</p>
+<div id='orgac44a18' class='table'>
+<div class='gutter'><a href='#orgac44a18'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Risk/impact description</th>
+<th scope="col" class="org-left">Likelihood</th>
+<th scope="col" class="org-left">What we’ll do to reduce this risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>Example: Pandemic causes closure of our retail outlet.</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>Example: Strengthen online sales/e-commerce.</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Example: Computer theft results in loss of financial records.</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>Example: Use cloud storage for business records.</code></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-org7b7dc6a" class="outline-4">
+<h4 id="org7b7dc6a"><span class="section-number-4">3.9.2.</span> Insurance<a aria-hidden="true" href="#org7b7dc6a">#</a> </h4>
+<div class="outline-text-4" id="text-3-9-2">
+<p>
+<code>If you’re not sure what you need, visit our Business</code>
+<code>insurance page for more information.</code>
+</p>
+
+<p>
+The insurance we have or need.
+</p>
+<div id='org9742091' class='table'>
+<div class='gutter'><a href='#org9742091'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Insurance type</th>
+<th scope="col" class="org-left">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-orgf7fe30c" class="outline-4">
+<h4 id="orgf7fe30c"><span class="section-number-4">3.9.3.</span> Succession plan<a aria-hidden="true" href="#orgf7fe30c">#</a> </h4>
+<div class="outline-text-4" id="text-3-9-3">
+<p>
+<code>What will you do if you decide to step down from your business?
+Do you have a</code> <code>plan in place in case something happens to you?</code>
+<code>Who would you want to take over your business?</code>
+<code>Consider formally documenting a succession plan for your business.</code>
+<code>Example: If the current owner decides to step down,</code> <code>the position
+will be offered</code> <code>to other business partners.
+The current owner will be paid out for their share</code>
+<code>and step down to an advisory role.</code>
+</p>
+</div>
+</div>
+<div id="outline-container-orge9f00f0" class="outline-4">
+<h4 id="orge9f00f0"><span class="section-number-4">3.9.4.</span> Laws we’ll need to comply with<a aria-hidden="true" href="#orge9f00f0">#</a> </h4>
+<div class="outline-text-4" id="text-3-9-4">
+<p>
+<code>List the laws that impact on your business</code>
+<code>including laws specific to your industry.</code>
+<code>Examples: fair trading/consumer laws, employment laws, state licences</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge65da68" class="outline-3">
+<h3 id="orge65da68"><span class="section-number-3">3.10.</span> Goals and actions<a aria-hidden="true" href="#orge65da68">#</a> </h3>
+<div class="outline-text-3" id="text-3-10">
+<p>
+<code>Learn how to set goals that will help your business grow.</code>
+</p>
+</div>
+<div id="outline-container-org0a2e079" class="outline-4">
+<h4 id="org0a2e079"><span class="section-number-4">3.10.1.</span> Goals for next year<a aria-hidden="true" href="#org0a2e079">#</a> </h4>
+<div class="outline-text-4" id="text-3-10-1">
+<div id='orgbedcdf2' class='table'>
+<div class='gutter'><a href='#orgbedcdf2'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Actions to achieve goal</th>
+<th scope="col" class="org-left">Due date</th>
+<th scope="col" class="org-left">Who’s responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-orgcf0e64e" class="outline-4">
+<h4 id="orgcf0e64e"><span class="section-number-4">3.10.2.</span> Goals for the next 3 years<a aria-hidden="true" href="#orgcf0e64e">#</a> </h4>
+<div class="outline-text-4" id="text-3-10-2">
+<div id='org927342c' class='table'>
+<div class='gutter'><a href='#org927342c'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Actions to achieve goal</th>
+<th scope="col" class="org-left">Due date</th>
+<th scope="col" class="org-left">Who’s responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1859b67" class="outline-3">
+<h3 id="org1859b67"><span class="section-number-3">3.11.</span> The finances<a aria-hidden="true" href="#org1859b67">#</a> </h3>
+<div class="outline-text-3" id="text-3-11">
+<p>
+<code>You may find the Australian Taxation Office’s small business</code>
+<code>benchmarks useful to compare your performance when completing this section.</code>
+</p>
+</div>
+<div id="outline-container-orged660bc" class="outline-4">
+<h4 id="orged660bc"><span class="section-number-4">3.11.1.</span> Finance needed<a aria-hidden="true" href="#orged660bc">#</a> </h4>
+<div class="outline-text-4" id="text-3-11-1">
+<p>
+<code>Delete this section if you aren’t seeking finance.</code>
+<code>Example: We are seeking a loan of $30,000 to purchase and install an</code>
+<code>automated coffee packaging machine.</code>
+</p>
+
+<p>
+How much money we need and what it’s for.
+</p>
+</div>
+</div>
+<div id="outline-container-orgadfc9be" class="outline-4">
+<h4 id="orgadfc9be"><span class="section-number-4">3.11.2.</span> Sources of funding<a aria-hidden="true" href="#orgadfc9be">#</a> </h4>
+<div class="outline-text-4" id="text-3-11-2">
+<p>
+<code>Describe sources and amounts of funding that your business has received.</code>
+<code>Include your own investment in your business.</code>
+<code>Example: We have received a $X loan from Business Bank.</code>
+<code>There is also $X of self-investment.</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org119e142" class="outline-4">
+<h4 id="org119e142"><span class="section-number-4">3.11.3.</span> Current finances<a aria-hidden="true" href="#org119e142">#</a> </h4>
+<div class="outline-text-4" id="text-3-11-3">
+<p>
+<code>Summarise your business performance over the last financial year</code>
+<code>in terms of cash flow, profit/loss and balance.</code>
+<code>Example: Over the last financial year we have had a positive cash</code>
+<code>flow of $X, out net profit was $X and our assets are worth $X.</code>
+</p>
+
+<p>
+How our business performed financially over the last financial year.
+</p>
+</div>
+</div>
+<div id="outline-container-org31b9c7c" class="outline-4">
+<h4 id="org31b9c7c"><span class="section-number-4">3.11.4.</span> Balance forecast<a aria-hidden="true" href="#org31b9c7c">#</a> </h4>
+<div class="outline-text-4" id="text-3-11-4">
+<p>
+<code>You can use our balance sheet template, your own accounting tools</code>
+<code>or ask your accountant for help</code>
+</p>
+
+<p>
+A summary of our forecast balance for the next 3 years.
+</p>
+
+<div id='org094ebb6' class='table'>
+<div class='gutter'><a href='#org094ebb6'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Year</th>
+<th scope="col" class="org-left">Year 1</th>
+<th scope="col" class="org-left">Year 2</th>
+<th scope="col" class="org-left">Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Total assets</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Total liabilities</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Net assets</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-org810cc53" class="outline-4">
+<h4 id="org810cc53"><span class="section-number-4">3.11.5.</span> Profit and loss forecast<a aria-hidden="true" href="#org810cc53">#</a> </h4>
+<div class="outline-text-4" id="text-3-11-5">
+<p>
+<code>You can use our profit and loss template, your own accounting tools</code>
+<code>or ask your accountant for help.</code>
+</p>
+
+<p>
+Our forecast profit/loss for the next 3 years.
+</p>
+<div id='orgf9e2883' class='table'>
+<div class='gutter'><a href='#orgf9e2883'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Year</th>
+<th scope="col" class="org-left">Year 1</th>
+<th scope="col" class="org-left">Year 2</th>
+<th scope="col" class="org-left">Year 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Gross profit/net sales</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Total expenses</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Net profit/loss</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div id="outline-container-orge7bf81e" class="outline-4">
+<h4 id="orge7bf81e"><span class="section-number-4">3.11.6.</span> Cash flow forecast<a aria-hidden="true" href="#orge7bf81e">#</a> </h4>
+<div class="outline-text-4" id="text-3-11-6">
+<p>
+<code>You can use our cash flow statement template, your own accounting tools</code>
+<code>or ask your accountant for help.</code>
+</p>
+
+<p>
+Our forecast cash flow for the next year.
+</p>
+<div id='org6aae876' class='table'>
+<div class='gutter'><a href='#org6aae876'>#</a></div>
+<div class='tabular'>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Month</th>
+<th scope="col" class="org-left">Jan</th>
+<th scope="col" class="org-left">Feb</th>
+<th scope="col" class="org-left">Mar</th>
+<th scope="col" class="org-left">Apr</th>
+<th scope="col" class="org-left">May</th>
+<th scope="col" class="org-left">Jun</th>
+<th scope="col" class="org-left">Jul</th>
+<th scope="col" class="org-left">Aug</th>
+<th scope="col" class="org-left">Sep</th>
+<th scope="col" class="org-left">Oct</th>
+<th scope="col" class="org-left">Nov</th>
+<th scope="col" class="org-left">Dec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Monthly cash balance</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+</tr>
+
+<tr>
+<td class="org-left">Closing balance</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+<td class="org-left">$</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1682e80" class="outline-2">
+<h2 id="org1682e80"><span class="section-number-2">4.</span> Supporting document checklist<a aria-hidden="true" href="#org1682e80">#</a> </h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Attached documents (where relevant):
+</p>
+<ul class="org-ul">
+<li class="off"><span class='checkbox'></span> Balance sheet forecast (including assumptions)</li>
+<li class="off"><span class='checkbox'></span> Balance sheet for last financial year</li>
+<li class="off"><span class='checkbox'></span> Cash flow statement forecast (including any assumptions)</li>
+<li class="off"><span class='checkbox'></span> Cash flow statement for last financial year</li>
+<li class="off"><span class='checkbox'></span> Market research</li>
+<li class="off"><span class='checkbox'></span> Profit and loss forecast sheets (including any assumptions)</li>
+<li class="off"><span class='checkbox'></span> Profit and loss for last financial year</li>
+<li class="off"><span class='checkbox'></span> Staff resume/s</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <!--<a href="https://github.com/Nan0Scho1ar/business_plan_template/commit/9cb2188" style="text-decoration: none"><code style="padding: 0; color: var(--text-light); font-size: inherit; opacity: 0.7">9cb2188</code></a>--> 2021-11-25 15:32 AEST, <a href="https://github.com/Nan0Scho1ar/business_plan_template/commit/9cb2188" style="text-decoration: none"><code style="padding: 0; color: var(--text-light); font-size: inherit; opacity: 0.7">9cb2188</code></a></p>
+<p class="author">Author: Nan0Scho1ar</p>
+<p class="date">Created: 2021-11-25 Thu 15:32</p>
+</div>
+</div>
+</body>
+</html>
